@@ -1,5 +1,7 @@
 from flask import Flask
+
 from fcm.blueprints.webpage import webpage
+from fcm.extensions import debug_toolbar
 
 
 def create_app(settings_override=None):
@@ -20,4 +22,16 @@ def create_app(settings_override=None):
     # Register the blueprints to the main app
     app.register_blueprint(webpage)
 
+    # Load the extensions in the app
+    extensions(app)
+
     return app
+
+
+def extensions(app):
+    """
+    A function for registering extensions to our flask application
+    """
+    debug_toolbar.init_app(app)
+
+    return None

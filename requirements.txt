@@ -14,14 +14,15 @@ pytest-cov==3.0.0
 autopep8==1.6.0
 flake8==4.0.1
 
+# Extensions
+Flask-DebugToolbar==0.11.0
+
 # Supplementary Libraries needed
-itsdangerous==2.0.1
 MarkupSafe==2.0.1
 Werkzeug==2.0.2
 attrs==21.2.0
 coverage==6.2
 iniconfig==1.1.1
-itsdangerous==2.0.1
 MarkupSafe==2.0.1
 mccabe==0.6.1
 packaging==21.3
@@ -32,5 +33,6 @@ pyflakes==2.4.0
 pyparsing==3.0.6
 toml==0.10.2
 tomli==2.0.0
-Werkzeug==2.0.2
+-e git+git@github.com-zacharatos:zacharatos/flask-customer-mgmt.git@e42a1a91a93c45f0442a9e7576d782e1ec20809f#egg=FCM_CLI
+blinker==1.4
 ################## 
