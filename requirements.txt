@@ -16,23 +16,19 @@ flake8==4.0.1
 
 # Extensions
 Flask-DebugToolbar==0.11.0
+Flask-Mail==0.9.1
+Flask-Login==0.5.0
 
-# Supplementary Libraries needed
-MarkupSafe==2.0.1
-Werkzeug==2.0.2
-attrs==21.2.0
-coverage==6.2
-iniconfig==1.1.1
-MarkupSafe==2.0.1
-mccabe==0.6.1
-packaging==21.3
-pluggy==1.0.0
-py==1.11.0
-pycodestyle==2.8.0
-pyflakes==2.4.0
-pyparsing==3.0.6
-toml==0.10.2
-tomli==2.0.0
--e git+git@github.com-zacharatos:zacharatos/flask-customer-mgmt.git@e42a1a91a93c45f0442a9e7576d782e1ec20809f#egg=FCM_CLI
-blinker==1.4
-################## 
+# Data
+Flask-SQLAlchemy==2.5.1
+psycopg2-binary==2.9.2
+redis==4.0.2
+celery==5.2.1
+
+# Forms
+Flask-WTF==1.0.0
+WTForms==3.0.0
+WTForms-Components==0.10.5
+WTForms-Alchemy==0.18.0
+
+##########################

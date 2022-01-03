@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    env_file:
+      - '.env'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+    ports:
+      - '5432:5432'
+    stdin_open: true
+    tty: true
+
+volumes:
+  postgres:

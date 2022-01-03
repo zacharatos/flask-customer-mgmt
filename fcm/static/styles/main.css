@@ -1,3 +1,12 @@
 body {
   background-color: #efefef !important;  
 }
+
+i.fas, i.fab {
+  font-size: 1.2em;
+  border: solid;
+  border-width: 3px;
+  border-radius: 50rem;
+  border-color: #323232;
+  color: #323232;
+}

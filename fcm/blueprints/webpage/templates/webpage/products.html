@@ -1,1 +1,53 @@
-{% extends 'layouts/base.html' %} {% block title %} {% endblock %}
+{% extends 'layouts/base.html' %} {% block title %} {% endblock %} {% block
+content %}
+
+<div class="row mt-2 shadow p-3 mb-3 bg-body rounded">
+  <div class="card border-0">
+    <div class="d-flex flex-row">
+      <h3 class="me-auto">Category</h3>
+      <span class="fs-6 fw-light m-2">Add new category</span>
+      <a href="#"><i class="fas fa-plus p-2"></i></a>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="card-body">
+        <div class="d-flex flex-row">
+          <h5 class="card-title w-75">List of Products</h5>
+          <span class="fs-6 fw-light m-2">Add new product</span>
+          <a href="#"><i class="fas fa-cubes p-2"></i></a>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
