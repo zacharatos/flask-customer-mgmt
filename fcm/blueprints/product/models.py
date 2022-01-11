@@ -17,7 +17,7 @@ class Product(db.Model):
         'category.id'), nullable=False)
 
     def __repr__(self):
-        return f"<Product {self.name}>"
+        return self.name
 
 
 class Category(db.Model):
@@ -31,4 +31,4 @@ class Category(db.Model):
     products = db.relationship('Product', backref='category', lazy=True)
 
     def __repr__(self):
-        return f"<Category {self.name}>"
+        return self.name

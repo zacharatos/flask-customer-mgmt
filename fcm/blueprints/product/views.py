@@ -9,6 +9,7 @@ from flask import (
 
 from fcm.extensions import db
 from fcm.blueprints.product.models import Product, Category
+from fcm.blueprints.product.forms import ProductForm
 
 product = Blueprint('product',
                     __name__,
@@ -19,8 +20,15 @@ product = Blueprint('product',
 # Create routes related to products
 @product.route('/add', methods=['GET', 'POST'])
 def add_product():
-    pass
-
+    form = ProductForm()
+    if form.validate_on_submit():
+        flash('The product added to the database.', 'success')
+        return redirect(url_for('webpage.products'))
+    # Return back a dictionary with all the data we need
+    ctx = {
+        'form': form
+    }
+    return render_template('product/add_product.html', ctx=ctx)
 
 @product.route('/edit/<int:pk>')
 def edit_product(pk):
@@ -35,10 +43,7 @@ def delete_product(pk):
 # Create routes related to categories
 @product.route('/cat/add', methods=['GET', 'POST'])
 def add_cat():
-    cat = Category(name='test')
-    db.session.add(cat)
-    db.session.commit()
-    return redirect(url_for('webpage.products'))
+    pass
 
 
 @product.route('/cat/edit/<int:pk>')
